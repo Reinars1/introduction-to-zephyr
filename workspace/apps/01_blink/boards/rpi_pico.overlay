@@ -3,7 +3,7 @@
         my-led = &led0;
     };
 
-	chosen {
+    chosen {
         zephyr,console = &cdc_acm_uart0;
     };
 };

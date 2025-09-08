@@ -1,6 +1,7 @@
-#include <stdio.h>
 #include <zephyr/kernel.h>
 #include <zephyr/drivers/gpio.h>
+
+#include "print.h"
 
 // Settings
 static const int32_t sleep_time_ms = 1000;
@@ -27,7 +28,7 @@ int main(void)
 
 		// Change the state of the pin and print
 		state = !state;
-		printk("LED state: %d\r\n", state);
+		print(state);
 		
 		// Set pin state
 		ret = gpio_pin_set_dt(&led, state);
