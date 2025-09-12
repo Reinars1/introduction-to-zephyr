@@ -26,6 +26,7 @@ int main() {
     while (1) {
         int button_state = gpio_pin_get_dt(&button);
         gpio_pin_set_dt(&led, button_state);
+        printk("Button state: %d\n", button_state);
         k_msleep(10);
 
     }
